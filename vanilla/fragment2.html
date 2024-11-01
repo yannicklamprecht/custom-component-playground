@@ -1,0 +1,14 @@
+<script>
+    const updateText = (text) => {
+        console.log('Updating text');
+        document.getElementById('message').innerText = text;
+    }
+</script>
+
+<h1>Fragment 2</h1>
+<p>Message: <span id="message"></span></p>
+<input type="text" onkeyup="updateText(this.value)">
+
+<button onclick="updateText('Hello Universe')">
+    Reset with Hello Universe
+</button>
