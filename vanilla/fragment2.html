@@ -3,12 +3,16 @@
         console.log('Updating text');
         document.getElementById('message').innerText = text;
     }
+    const clearInput = () => {
+        document.getElementById('input').value = "";
+        updateText("Hello Universe");
+    }
 </script>
 
 <h1>Fragment 2</h1>
 <p>Message: <span id="message"></span></p>
-<input type="text" onkeyup="updateText(this.value)">
+<label for="input">Input</label> <input id="input" type="text" onkeyup="updateText(this.value)">
 
-<button onclick="updateText('Hello Universe')">
-    Reset with Hello Universe
+<button onclick="clearInput()">
+    Reset with Hello Universe & clear input
 </button>
